@@ -21,7 +21,7 @@ if($FileBrowser.FileName -ne "") {
     Write-Host "Enter your SHA256 checksum to verify the integrity of your file" -ForegroundColor Yellow
     $UserHashVal = Read-Host
     
-    if ($UserHashVal -ceq $HashValue.Hash) {
+    if ($UserHashVal -eq $HashValue.Hash) {
         Write-Host "Your file is successfully verified!" -ForegroundColor Green
     } else {
         Write-Host "The hash values doesn't match" -BackgroundColor Red -ForegroundColor Black
